@@ -1,1 +1,1 @@
-# C-WGAN-to-generate-64-channel-EEG
+# Wasserstein Generative Adversarial with Gradient Penalty to generate and classify electroencephalography data of an RSVP experiment
