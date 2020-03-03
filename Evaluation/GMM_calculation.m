@@ -22,9 +22,9 @@ for k = 1:10
 end
 
 [minBIC,numComponents] = min(BIC);
-numComponents % out put the number of GMM component fitted 
+numComponents % out put the number of GMM component fitted, let's say 4 GMM components are fitted 
 
-% GMM likelihood for 4 components
+% GMM likelihood for 4 components, same can be calculated for other GMM components
 gm = fitgmdist(X,numComponents,'RegularizationValue',0.1);
 
 X1=X; % likelihood distance from real samples
@@ -43,4 +43,4 @@ p = gm.ComponentProportion;
 distance = d*p';
 Average_distance_real = log(mean(distance, 1))
 
-% same procedure is applied for other no of GMMs, all other channels, and nontarget samples 
+% Similarly the proposed distance measure can be calculated for all other channels, and nontarget data.  
