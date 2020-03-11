@@ -46,26 +46,4 @@ for n_ch = 1:64;
     GMM_likelihood(n_ch,:) = GMM_likelihood_ch;
 end
 
-% Now you can have GMM_likelihood array in tabular
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+% Now you can have GMM_likelihood array 
