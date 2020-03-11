@@ -1,7 +1,6 @@
 %Normalize X2 RSVP data and generate ERP
 % Data format channel * timepoint * #_of_epochs
 
-
 % now normalize target epochs
 [channels,timepoints,num_epochs] = size(target_ep);
 target_ep = reshape(target_ep,[channels,timepoints*num_epochs]);
