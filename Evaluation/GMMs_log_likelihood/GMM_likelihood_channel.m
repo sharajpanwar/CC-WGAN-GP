@@ -5,7 +5,6 @@
 % The GMMs are fitted on real data and average likelihood of real, vanilla
 % GAN and CC-GAN is calculated to compare the sample's quality.
  
-
 function GMM_likelihood_channel = Distance(real, Vanilla_GAN, CC_GAN, channel, gmm_count);
 % real => real samples, Vanilla_GAN => Samples generated from vanilla GAN, CC_GAN => samples
 % generated from CC-GAN, channel => channel to be evaluated, i.e. 30 for POz, 
