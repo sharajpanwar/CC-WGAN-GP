@@ -172,10 +172,3 @@ for i in range(len(list)):
     # serialize weights to HDF5
     model.save_weights(str(output_dir1) +  str(Run_tag)+'_model_weight.h5')
     print("Saved D_C_te_on_sess_5_baseline to disk")
-
-
-
-
-
-
-
