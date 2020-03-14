@@ -10,6 +10,5 @@ def data_import(X, Y):
     X = X[ind_list, :,:];    Y = Y[ind_list]
     #the EEGNet code is written for keras defaul settings: "image_data_format": "channels_last"
     X = X.reshape(X.shape[0], Channels, time_step, 1) #reshape the data
-    Y[Y==4]=0;    Y[Y==5]=1
     Y = keras.utils.to_categorical(Y, 2) #one hot encoding of labels
     return X, Y
