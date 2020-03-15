@@ -1,5 +1,5 @@
 
-% This script is to get the channel names and channelwise alerts and drowsy data 
+% This script is to get the channel names and channelwise Target and nonTarget data 
 % Loading the data files 
 load('dir/Target');
 load('dir/nonTarget');
@@ -12,7 +12,7 @@ channels_names = channels(1,1,:)
 channels_names=squeeze(channels_names);
 channel_names_table =  cell2table(channels_names)
 
-%Now creating a cell of channel wise alerts (row1) and drowsy (row2)
+% Now creating a cell of channel wise Target (row1) and nonTarget (row2)
 
 channel_data  = cell(1,64);
 
