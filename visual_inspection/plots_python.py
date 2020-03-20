@@ -3,9 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns; sns.set()
-os.environ["CUDA_VISIBLE_DEVICES"]= '0'
-import os
-os.environ["CUDA_VISIBLE_DEVICES"]= '0'
 
 # function of creating Heat maps
 # data=> target or nonTarget; dir => out put directory; n => title name
