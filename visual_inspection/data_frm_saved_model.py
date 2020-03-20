@@ -60,6 +60,6 @@ scipy.io.savemat(out_put_dir+'/nontarget_gen_cc_gan.mat', dict(nontarget_gen_cc_
 create_heat_map(target_gen_cc_gan, out_put_dir, 'Target')
 create_heat_map(nontarget_gen_cc_gan, out_put_dir, 'NonTarget')
 
-# Generate poz
+# Plot POz channel
 create_one_channel_plot(target_gen_cc_gan, 29, out_put_dir, 'Target_POz')
 create_one_channel_plot(nontarget_gen_cc_gan, 29, out_put_dir, 'NonTarget_POz')
