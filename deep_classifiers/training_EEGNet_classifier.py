@@ -9,7 +9,6 @@ from data_import import data_import
 import os
 import argparse
 from numpy import *
-img_rows, img_cols = 64, 64
 import seaborn as sns;
 import tensorflow as tf
 from keras import backend as k
