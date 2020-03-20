@@ -41,6 +41,7 @@ print ("Evaluation on subject {}, Test session {}".format(args.sub, args.sess))
 
 
 # construct the model
+
 def Discriminator_Classifier(): #Discriminator as Classifier, model architecture
 
     model = Sequential()
