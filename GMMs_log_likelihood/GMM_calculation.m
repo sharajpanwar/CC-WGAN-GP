@@ -4,17 +4,15 @@
 % The procedure/code is same for Target and nonTarget samples. 
 % Let's assume Target data
 
-% Upload real target, vanilla GAN generated target, and CC-GAN generated
-% target data. 
+% Upload real target, vanilla GAN generated target, and CC-GAN generated target data. 
 
 % In first, we will identify the number of fitted GMMs for all 64 channels of
 % real target data and store them in gmm_count
 
 gmm_count = zeros(1,64); %create an array to store 
-
 for ch = 1:64;
     X= squeeze(T_ch64_s1_r2(:,ch,:));
-%determining the no of GMMs using BCI method 
+% determining the no of GMMs using Bayes Information Criterion (BIC) method 
 options = statset('Display','final');
 GMModel = fitgmdist(X,2,'CovarianceType','diagonal','Options',options, 'RegularizationValue',0.1);
 
