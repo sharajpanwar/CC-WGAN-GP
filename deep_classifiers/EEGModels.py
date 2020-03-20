@@ -11,9 +11,8 @@ os.environ["CUDA_VISIBLE_DEVICES"]= '0'
 
 # EEGNet is state of the art model to predict cognitive events proposed as:
 # Acknowledgement: codes used in this script are modified from https://github.com/vlawhern/arl-eegmodels/blob/master/EEGModels.py
-#                  to fit data dimensions such as time samples, and channels. The EEGNet paper is cited in the article as:
-#                  Lawhern, Vernon J., et al. "EEGNet: a compact convolutional neural network for EEG-based braincomputer interfaces."
-#                  Journal of neural engineering 15.5 (2018): 056013.
+# to fit data dimensions such as time samples, and channels. The EEGNet paper is cited in the article as: Lawhern, Vernon J., et al. "EEGNet: a compact convolutional neural network for EEG-based braincomputer interfaces."
+# Journal of neural engineering 15.5 (2018): 056013.
 
 def EEGNet():
     # Keras implementation of EEGNet (arXiv 1611.08024)
@@ -51,17 +50,7 @@ def EEGNet():
 
 def EEGNet2(nb_classes=2, Chans=64, Samples=64, regRate=0.001,
             dropoutRate=0.25, kernLength=64, numFilters=8):
-    """ EEGNet variant that does band-pass filtering first, implemented here
-    as a temporal convolution, prior to learning spatial filters. Here, we
-    use a Depthwise Convolution to learn the spatial filters as opposed to
-    regular Convolution as depthwise allows us to learn a spatial filter per
-    temporal filter, without it being fully-connected to all feature maps
-    from the previous layer. This helps primarily to reduce the number of
-    parameters to fit... it also more closely represents standard BCI
-    algorithms such as filter-bank CSP.
-
-    """
-
+    
     input_conv = Input(shape=(1, Chans, Samples))
 
     conv_block1 = Conv2D(numFilters, (1, kernLength), padding='same',
