@@ -41,8 +41,6 @@ print ("Evaluation on subject {}, Test session {}".format(args.sub, args.sess))
 
 
 # construct the model
-img_rows, img_cols = 64, 64
-
 def Discriminator_Classifier(): #Discriminator as Classifier, model architecture
 
     model = Sequential()
