@@ -6,10 +6,10 @@ from keras.models import load_model, Model, Sequential
 import scipy.io
 import os
 import seaborn as sns; sns.set()
-os.environ["CUDA_VISIBLE_DEVICES"]= '0'
 import tensorflow as tf
 from keras import backend as k
 from plots_python import create_heat_map, create_one_channel_plot
+os.environ["CUDA_VISIBLE_DEVICES"]= '0'
 
 ## set GPU options
 # TensorFlow wizardry
