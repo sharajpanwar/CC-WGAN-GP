@@ -34,14 +34,6 @@ parser.add_argument("sess", help="enter the test session") # test session
 args = parser.parse_args()
 print ("Evaluation on subject {}, Test session {}".format(args.sub, args.sess))
 
-
-# construct the model
-img_rows, img_cols = 64, 64
-model = EEGNet() #obtained from the EEGNet models module
-print (model.summary())
-# compile the model
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=["accuracy"])
-
 dir = '/home/guest/PycharmProjects/sharaj_works/input_data/rsvp_session_wise/'
 # Directory where all the data is kept in folders named with subjects
 # e.g. dir/S1/T_s1_r1, T1_s1_r1 stands for target subject 1 session 1
@@ -100,6 +92,14 @@ X_test, y_test = data_import(X_test, y_test)
 
 X_train = X_train.astype('float32'); y_train = y_train.astype('int32')
 X_test = X_test.astype('float32'); y_test = y_test.astype('int32')
+
+# construct the model
+img_rows, img_cols = 64, 64
+model = EEGNet() #obtained from the EEGNet models module
+print (model.summary())
+
+# compile the model
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=["accuracy"])
 
 # let's fit the model
 history = model.fit(X_train, y_train, batch_size=32, epochs=2, verbose=2, validation_split=0.10)
