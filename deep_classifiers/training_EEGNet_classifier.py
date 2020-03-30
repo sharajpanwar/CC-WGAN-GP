@@ -38,24 +38,12 @@ dir = '/home/guest/PycharmProjects/sharaj_works/input_data/rsvp_session_wise/'
 # Directory where all the data is kept in folders named with subjects
 # e.g. dir/S1/T_s1_r1, T1_s1_r1 stands for target subject 1 session 1
 
-dir2 = '/home/guest/PycharmProjects/sharaj_works/NSRE/rsvp_gen_results/subject_wise/'
-# dir2 is the main output directory to store results
+# dir2 = '/home/guest/PycharmProjects/sharaj_works/NSRE/rsvp_gen_results/subject_wise/'
+# # dir2 is the main output directory to store results
 sub = args.sub # parsing the subject No.
 sess = args.sess # parsing the test session No.
 
-# Run tag will dynamically create the sub-directories to store results
-Run_tag = 'EEGNet_subject_'+ str(sub)+'_te_session_' + str(sess)
-print(Run_tag)
 
-# output_dir & output_dir1 will be created for each subject and test session results
-output_dir = dir2 + 's_try_' + str(sub) + '/'
-
-if not os.path.exists(output_dir):
-    os.mkdir(output_dir)
-output_dir1 = os.path.join(output_dir, Run_tag)
-
-if not os.path.exists(output_dir1):
-    os.mkdir(output_dir1)
 
 # uploading target & nonTarget session data for the given subject
 a1 = np.load(dir + 's' + str(sub) + '/T_s' + str(sub) + '_r1.npy')
@@ -93,6 +81,24 @@ X_test, y_test = data_import(X_test, y_test)
 X_train = X_train.astype('float32'); y_train = y_train.astype('int32')
 X_test = X_test.astype('float32'); y_test = y_test.astype('int32')
 
+# Now since we uploaded the data, let's create directories to store the results
+dir2 = '/home/guest/PycharmProjects/sharaj_works/NSRE/rsvp_gen_results/subject_wise/'
+# dir2 is the main output directory to store results
+
+# Run tag will dynamically create the sub-directories to store results
+Run_tag = 'EEGNet_subject_'+ str(sub)+'_te_session_' + str(sess)
+print(Run_tag)
+
+# output_dir & output_dir1 will be created for each subject and test session results
+output_dir = dir2 + 's_try_' + str(sub) + '/'
+
+if not os.path.exists(output_dir):
+    os.mkdir(output_dir)
+output_dir1 = os.path.join(output_dir, Run_tag)
+
+if not os.path.exists(output_dir1):
+    os.mkdir(output_dir1)
+  
 # construct the model
 img_rows, img_cols = 64, 64
 model = EEGNet() #obtained from the EEGNet models module
