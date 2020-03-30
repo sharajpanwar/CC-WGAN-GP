@@ -42,8 +42,6 @@ dir = '/home/guest/PycharmProjects/sharaj_works/input_data/rsvp_session_wise/'
 sub = args.sub # parsing the subject No.
 sess = args.sess # parsing the test session No.
 
-
-
 # uploading target & nonTarget session data for the given subject
 a1 = np.load(dir + 's' + str(sub) + '/T_s' + str(sub) + '_r1.npy')
 a2 = np.load(dir + 's' + str(sub) + '/T_s' + str(sub) + '_r2.npy')
