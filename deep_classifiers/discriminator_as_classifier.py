@@ -81,7 +81,7 @@ X_test, y_test = data_import(X_test, y_test)
 X_train = X_train.astype('float32'); y_train = y_train.astype('int32')
 X_test = X_test.astype('float32'); y_test = y_test.astype('int32')
 
-# Now since we uploaded the data, let's create directories to store the results
+# Now since we have uploaded the data, let's create directories to store the results
 dir2 = '/home/guest/PycharmProjects/sharaj_works/NSRE/rsvp_gen_results/subject_wise/'
 # dir2 is the main output directory to store results
 # Run tag will dynamically create the sub-directories to store results
