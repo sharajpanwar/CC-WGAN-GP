@@ -1,4 +1,3 @@
-
 import keras
 from keras.callbacks import ModelCheckpoint
 from EEGModels import EEGNet
