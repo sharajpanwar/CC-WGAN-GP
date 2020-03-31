@@ -1,5 +1,3 @@
-# Author: Sharaj Panwar, MSEE; Research Fellow at Brain Computer Interface Lab./& Open Cloud Institute at UTSA, San Antonio, Texas
-# keras custom layers created for the experiments performed in https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdffrom keras import Sequential
 import numpy as np
 from keras.layers import Lambda
 import tensorflow as tf
