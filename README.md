@@ -2,7 +2,7 @@
 
 A Wasserstein Generative Adversarial with Gradient Penalty (WGAN-GP) is proposed to generate and classify electroencephalography(EEG) data of a Rapid Visual Presentation (RSVP) experiment. 
 
-The article is under minor revision in IEEE Transactions on Neural Systems & Rehabilitation Engineering. The preprint is available at https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdf
+The article is under minor revision in IEEE Transactions on Neural Systems & Rehabilitation Engineering. The preprint is available @ https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdf
 
 # Installation and Dependancies:.
 
