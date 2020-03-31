@@ -1,5 +1,3 @@
-# Author: Sharaj Panwar, MSEE; Research Fellow at Brain Computer Interface Lab./& Open Cloud Institute at UTSA, San Antonio, Texas
-# Architecture proposed in https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdf
 from __future__ import print_function, division
 import keras
 import os
