@@ -1,8 +1,9 @@
 # Repo "Modeling EEG data distribution with a Wasserstein Generative Adversarial Network (WGAN) to predict RSVP Events" 
+# Accepted in IEEE Transactions on Neural Systems & Rehabilitation Engineering
 
 A Wasserstein Generative Adversarial with Gradient Penalty (WGAN-GP) is proposed to generate and classify electroencephalography(EEG) data of a Rapid Visual Presentation (RSVP) experiment. 
 
-The article is under minor revision in IEEE Transactions on Neural Systems & Rehabilitation Engineering. The preprint is available @ https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdf
+The preprint is available @ https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdf
 
 # Installation and Dependancies:
 
