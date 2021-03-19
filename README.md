@@ -5,6 +5,8 @@ A Wasserstein Generative Adversarial with Gradient Penalty (WGAN-GP) is proposed
 
 The preprint is available @ https://arxiv.org/ftp/arxiv/papers/1911/1911.04379.pdf
 
+## Published Version: https://ieeexplore.ieee.org/abstract/document/9130768
+
 # Installation and Dependancies:
 
 1. python 3.6.4
