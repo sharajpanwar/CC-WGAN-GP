@@ -129,7 +129,13 @@ wgan_d_itr =[];wgan_g_itr=[]; #discriminator and generator losses for each itera
 wgan_d_ep=[];wgan_g_ep=[]; #discriminator and generator losses for each epoch averaging over training ratio
 
 for epoch in range(Number_epochs):
-    np.random.shuffle(X_train)
+#     np.random.shuffle(X_train)
+    
+    ind_list = [i for i in range(X_train.shape[0])]
+    shuffle(ind_list)
+    X_train = X_train[ind_list, :]
+    y_train = y_train[ind_list]
+    
     print("Epoch: ", epoch)
     print("Number of batches: ", int(X_train.shape[0] // batch_size))
     discriminator_loss = []
